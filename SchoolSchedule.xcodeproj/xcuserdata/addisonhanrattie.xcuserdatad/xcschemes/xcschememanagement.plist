@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>SchoolSchedule.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>SchoolScheduleWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>FE30628C201AB9B400C007B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE3062A3201AB9B400C007B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE3062AE201AB9B400C007B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE3062C4201ABB9800C007B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE9552EA2143291900728520</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE9552F32143291900728520</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE95530D21432B7E00728520</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE995A10218119F200FB3F41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

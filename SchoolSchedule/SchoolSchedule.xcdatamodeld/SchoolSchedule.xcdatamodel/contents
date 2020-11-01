@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ClassData" representedClassName="ClassData" syncable="YES" codeGenerationType="class">
+        <attribute name="classnumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minute" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ClassResources" representedClassName="ClassResources" syncable="YES" codeGenerationType="class">
+        <attribute name="classdetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classnumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="DayBaseline" representedClassName="DayBaseline" syncable="YES" codeGenerationType="class">
+        <attribute name="baseline" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="days" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ClassData" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="ClassResources" positionX="-54" positionY="18" width="128" height="105"/>
+        <element name="DayBaseline" positionX="-63" positionY="9" width="128" height="75"/>
+    </elements>
+</model>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="SchoolScheduleWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLm-s9-9Ze">
+                                <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="2Rd-zi-cBK"/>
+                                    <constraint firstAttribute="width" secondItem="lLm-s9-9Ze" secondAttribute="height" multiplier="1:1" id="Dzo-DJ-8sK"/>
+                                    <constraint firstAttribute="width" secondItem="lLm-s9-9Ze" secondAttribute="height" multiplier="1:1" id="l3E-Fd-9rh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-ha-bBc">
+                                <rect key="frame" x="56" y="0.0" width="264" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2jb-ha-bBc" secondAttribute="height" multiplier="21:5" id="9Or-Ri-130"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Labelest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fa8-14-5LF">
+                                <rect key="frame" x="0.0" y="79" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkY-uy-SJT">
+                                <rect key="frame" x="290" y="0.0" width="30" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="R"/>
+                                <connections>
+                                    <action selector="refreshDat:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="XWS-rj-CjT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Labor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1m-pb-Mus">
+                                <rect key="frame" x="261" y="79" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lLm-s9-9Ze" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="42y-SD-2fW"/>
+                            <constraint firstItem="2jb-ha-bBc" firstAttribute="bottom" secondItem="lLm-s9-9Ze" secondAttribute="bottom" id="BIe-dx-H4X"/>
+                            <constraint firstItem="Z1m-pb-Mus" firstAttribute="leading" secondItem="lLm-s9-9Ze" secondAttribute="trailing" constant="-59" id="FBM-6V-Vvh"/>
+                            <constraint firstItem="2jb-ha-bBc" firstAttribute="bottom" secondItem="lLm-s9-9Ze" secondAttribute="bottom" id="QaS-7A-5zw"/>
+                            <constraint firstItem="2jb-ha-bBc" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" id="RWp-sc-gGH"/>
+                            <constraint firstItem="2jb-ha-bBc" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="SYC-wq-nnV"/>
+                            <constraint firstItem="lLm-s9-9Ze" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="akR-zr-aVL"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Z1m-pb-Mus" secondAttribute="trailing" id="n1r-gU-Cw1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                    <connections>
+                        <outlet property="ClassLabel" destination="2jb-ha-bBc" id="8dY-bl-OWU"/>
+                        <outlet property="ImageView" destination="lLm-s9-9Ze" id="N0P-Qv-zBX"/>
+                        <outlet property="LeftDetail" destination="Fa8-14-5LF" id="nbm-K9-iUL"/>
+                        <outlet property="RightDetail" destination="Z1m-pb-Mus" id="0UE-SU-Ao0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="131.52709359605913"/>
+        </scene>
+    </scenes>
+</document>
