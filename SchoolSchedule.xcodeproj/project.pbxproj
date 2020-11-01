@@ -313,7 +313,7 @@
 				TargetAttributes = {
 					FE30628C201AB9B400C007B9 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -332,19 +332,19 @@
 					};
 					FE3062A3201AB9B400C007B9 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FE30628C201AB9B400C007B9;
 					};
 					FE3062AE201AB9B400C007B9 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FE30628C201AB9B400C007B9;
 					};
 					FE3062C4201ABB9800C007B9 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -637,7 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.addisonhanrattie.SchoolSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -657,7 +657,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.addisonhanrattie.SchoolSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -677,7 +677,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = addisonhanrattie.SchoolScheduleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SchoolSchedule.app/SchoolSchedule";
 			};
@@ -698,7 +698,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = addisonhanrattie.SchoolScheduleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SchoolSchedule.app/SchoolSchedule";
 			};
@@ -718,7 +718,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = addisonhanrattie.SchoolScheduleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SchoolSchedule;
 			};
@@ -738,7 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = addisonhanrattie.SchoolScheduleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SchoolSchedule;
 			};
@@ -759,7 +759,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.addisonhanrattie.SchoolSchedule.SchoolScheduleWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -779,7 +779,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.addisonhanrattie.SchoolSchedule.SchoolScheduleWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

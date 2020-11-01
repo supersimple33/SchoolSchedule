@@ -83,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let baseline : Date!
         do {
             let baseEnt = try context.fetch(dateRequest)
-            baseline = baseEnt.first!.value(forKey: "baseline") as! Date
+            baseline = baseEnt.first!.value(forKey: "baseline") as? Date
         } catch {
             print(error)
             return .failed
@@ -141,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         fetchRequest.predicate = dayPredicate
         fetchRequest.sortDescriptors = [hdescriptor, mdescriptor]
         do {
-            var results = try context.fetch(fetchRequest)
+            let results = try context.fetch(fetchRequest)
             for i in 0...results.count - 1 {
                 let result = results[i]
                 var endResult : NSManagedObject?
@@ -201,12 +201,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         if triggerDate! < Date() {
             triggerDate! += 86400.0
         }
-        print(triggerDate)
+        print(triggerDate as Any)
         print(Calendar.current.dateComponents(in: TimeZone.current, from: triggerDate!), "bill")
         let components = Calendar.current.dateComponents([.month, .day, .hour, .minute], from: triggerDate!)
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let notification = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        print(trigger.nextTriggerDate())
+        print(trigger.nextTriggerDate() as Any)
         print(trigger.dateComponents)
         UNUserNotificationCenter.current().add(notification) { (err) in
             if err != nil {

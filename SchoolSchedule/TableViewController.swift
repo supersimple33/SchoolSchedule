@@ -89,7 +89,7 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
             var values: [Int?] = []
             for result in results {
                 let val = result.value(forKey: "hour") as! Int?
-                print(val)
+                print(val as Any)
                 values.append(val)
             }
             print(values)
@@ -189,7 +189,7 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
                     cell.textLabel?.text = "nil"
                     cell.hL1.text = "nil"
                 }
-                print(result)
+                print(result as Any)
                 let m = (result.value(forKey: "minute") ?? -1) as! Int
                 if m > 9 {
                     cell.detailTextLabel?.text = "\(cellHr):\(m)"
@@ -225,10 +225,10 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
             // Delete the row from the data source
             let fetch = NSFetchRequest<NSManagedObject>(entityName: "ClassData")
             let dayOf = indexPath.section + 1
-            print(cell.hL1)
+            print(cell.hL1 as Any)
             let predicateA = NSPredicate(format: "day = %@", "\(dayOf)")
             let predicateB = NSPredicate(format: "classnumber = %@", cell.hL1.text!)
-            let firstColon = cell.detailTextLabel?.text?.index(of: ":") ?? cell.hL1.text?.endIndex
+            let firstColon = cell.detailTextLabel?.text?.firstIndex(of: ":") ?? cell.hL1.text?.endIndex
             let hour = cell.detailTextLabel?.text?.prefix(upTo: firstColon!)
             let minute = cell.detailTextLabel?.text?.suffix(from: firstColon!)
             print(String(describing: hour)," hour")
@@ -243,7 +243,7 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
                 let results = try context.fetch(fetch)
                 context.delete(results.first!)
                 try context.save()
-                print(results.first, "results.first")
+                print(results.first as Any, "results.first")
                 tableView.deleteRows(at: [indexPath], with: .fade)
             } catch {
                 print(error)
@@ -275,10 +275,10 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
         let cell = self.tableView.cellForRow(at: fromIndexPath) as! TableViewCell
         let fetch = NSFetchRequest<NSManagedObject>(entityName: "ClassData")
         let dayOf = fromIndexPath.section + 1
-        print(cell.hL1)
+        print(cell.hL1 as Any)
         let predicateA = NSPredicate(format: "day = %@", "\(dayOf)")
         let predicateB = NSPredicate(format: "classnumber = %@", cell.hL1.text!)
-        let firstColon = cell.detailTextLabel?.text?.index(of: ":") ?? cell.hL1.text?.endIndex
+        let firstColon = cell.detailTextLabel?.text?.firstIndex(of: ":") ?? cell.hL1.text?.endIndex
         let hour = cell.detailTextLabel?.text?.prefix(upTo: firstColon!)
         let minute = cell.detailTextLabel?.text?.suffix(from: firstColon!)
         print(String(describing: hour)," hour")
@@ -294,7 +294,7 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
             let result = results.first
             result?.setValue((to.section + 1), forKey: "day")
             try context.save()
-            print(results.first, "results.first")
+            print(results.first as Any, "results.first")
             tableView.reloadData()
         } catch {
             print(error)

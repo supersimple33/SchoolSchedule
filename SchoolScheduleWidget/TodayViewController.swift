@@ -134,8 +134,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             do {
                 classes = try context.fetch(fetchRequest)
                 let baseEnt = try context.fetch(dateRequest)
-                letterDays = baseEnt.first?.value(forKey: "days") as! Int
-                baseline = baseEnt.first?.value(forKey: "baseline") as! Date
+                letterDays = baseEnt.first?.value(forKey: "days") as? Int
+                baseline = baseEnt.first?.value(forKey: "baseline") as? Date
                 return nil
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")
@@ -145,8 +145,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             do {
                 classes = try context.fetch(fetchRequest)
                 let baseEnt = try context.fetch(dateRequest)
-                letterDays = baseEnt.first?.value(forKey: "days") as! Int
-                baseline = baseEnt.first?.value(forKey: "baseline") as! Date
+                letterDays = baseEnt.first?.value(forKey: "days") as? Int
+                baseline = baseEnt.first?.value(forKey: "baseline") as? Date
                 return nil
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")

@@ -84,7 +84,7 @@ class PageViewController: UIPageViewController, UIGestureRecognizerDelegate {
 extension PageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
         
         let previousIndex = viewControllerIndex - 1
         
@@ -96,7 +96,7 @@ extension PageViewController: UIPageViewControllerDataSource {
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
         
         let nextIndex = viewControllerIndex + 1
         
