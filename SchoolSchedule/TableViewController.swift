@@ -16,7 +16,6 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
     }
-    
 
     var resources: NSManagedObject!
     var context: NSManagedObjectContext!
@@ -177,22 +176,6 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
                 var result: NSManagedObject!
                 print(results.count, 20002)
                 result = results[indexPath.row]
-//                if results.count == 1 {
-//                    result = results.first
-//                } else {
-//                    for i in 1...100 {
-//                        print(indexPath.row, indexPath.section)
-//                        print(indexPath.row - i, "01010")
-//                        if indexPath.row - i < 0 {
-//                            print(i, 555)
-//                            result = results[i - 1]
-//                            break
-//                        } else if sectionHours[indexPath.section][indexPath.row - i] != cellHr {
-//                            result = results[i - 1]
-//                            break // should kill the 1 to 100 loop
-//                        }
-//                    }
-//                }
                 if let oNumb = result.value(forKey: "classnumber") as! Int? {
                     //                cell.hL1.text = String(describing: result.value(forKey: "classnumber") as! Int?)
                     let cNumb = oNumb + 1
@@ -237,9 +220,6 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "CellReuser", for: indexPath) as! TableViewCell
-//        let tag = cantorPairingNumber(row: indexPath.row + 1, section: indexPath.section + 1)
-//        let cell = self.tableView.viewWithTag(tag) as! TableViewCell
         let cell = self.tableView.cellForRow(at: indexPath) as! TableViewCell
         if editingStyle == .delete {
             // Delete the row from the data source
@@ -274,9 +254,6 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let tag = cantorPairingNumber(row: indexPath.row + 1, section: indexPath.section + 1)
-//        let cell = self.tableView.viewWithTag(tag) as! TableViewCell
-//        let cell = self.tableView.cellForRow(at: indexPath) as! TableViewCell
         oldIndex = indexPath
         self.tableView.reloadRows(at: [indexPath], with: .automatic)
         oldIndex = nil
@@ -295,9 +272,6 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         print("go throughhhhhhhhhhhhh")
-//        let tag = cantorPairingNumber(row: fromIndexPath.row + 1, section: fromIndexPath.section + 1)
-//        let cell = self.tableView.viewWithTag(tag) as! TableViewCell
-//        let cellB = self.tableView.cellForRow(at: fromIndexPath)
         let cell = self.tableView.cellForRow(at: fromIndexPath) as! TableViewCell
         let fetch = NSFetchRequest<NSManagedObject>(entityName: "ClassData")
         let dayOf = fromIndexPath.section + 1
@@ -338,15 +312,5 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
         let d = c / 2
         return d + section
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -17,7 +17,6 @@ class BigCellView: UITableViewCell, UIPickerViewDataSource, UIPickerViewDelegate
         do {
             object!.setValue(classPicker.selectedRow(inComponent: 0) + 1, forKey: "classnumber")
             print(classPicker.selectedRow(inComponent: 0))
-//            print(classPicker.selectedRow(inComponent: 1))
             let cal = Calendar.current
             let h = cal.component(.hour, from: timePicker.date)
             let m = cal.component(.minute, from: timePicker.date)
@@ -71,12 +70,6 @@ class BigCellView: UITableViewCell, UIPickerViewDataSource, UIPickerViewDelegate
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         awakeFromNib()
-//        if selected == false {
-//
-//        } else {
-//            print("unselected")
-//        }
-        // Configure the view for the selected state
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

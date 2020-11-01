@@ -16,28 +16,6 @@ class TutorialViewController: UIViewController {
     var context: NSManagedObjectContext!
     
     @IBAction func nchsAutoSetup(_ sender: Any) {
-//        autoreleasepool {
-//            // Create the managed object context
-//            // Custom code here...
-//            // Save the managed object context
-//            do {
-//                try context.save()
-//                let dat = try Data(contentsOf: URL(string: Bundle.main.path(forResource: "ZCLASSDATA", ofType: "json")!)!)
-//                let cereal = try JSONSerialization.jsonObject(with: dat, options: []) as? NSArray
-////                cereal?.enumerateObjects({ (obj, idx, stop) in
-////                    let ent = NSEntityDescription.insertNewObject(forEntityName: "ClassData", into: context)
-////                    CoreDataStack.
-////                    man.setValue((obj as! Dictionary)["minute"], forKey: "minute")
-////                    man.setValue((obj as! Dictionary)["hour"], forKey: "hour")
-////                    man.setValue((obj as! Dictionary)["day"], forKey: "day")
-////                    man.setValue((obj as! Dictionary)["classnumber"], forKey: "classnumber")
-////                })
-//                try context.save()
-//            } catch {
-//                print(error)
-//            }
-////            print("Imported Banks: \(Banks ?? "")")
-//        }
         let sqlitePath = Bundle.main.path(forResource: "SchoolSchedule", ofType: "sqlite")
         let URL1 = URL(fileURLWithPath: sqlitePath!)
         let URL2 = URL(fileURLWithPath: CoreDataStack.applicationDocumentsDirectory.relativePath + "/SchoolSchedule.sqlite")
@@ -67,35 +45,10 @@ class TutorialViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
-//    func createShortcut(currentClass: String, toClass: String){
-//        let intent = TimeWidgetIntent()
-//
-//        if let shortcut = INShortcut(intent: intent) {
-//            let releventShortcut = INRelevantShortcut(shortcut: shortcut)
-//            releventShortcut.shortcutRole = .information
-//            releventShortcut.relevanceProviders = [INDailyRoutineRelevanceProvider(situation: .school), INDailyRoutineRelevanceProvider(situation: .school)]// may need to add more relevance providers;
-//            let defferedTitle = NSString.deferredLocalizedIntentsString(with: currentClass + " -> " + toClass) as String
-//            let defaultTemplate = INDefaultCardTemplate(title: defferedTitle)
-//            defaultTemplate.subtitle = NSString.deferredLocalizedIntentsString(with: "", ) as String
-//            releventShortcut.watchTemplate = defaultTemplate
-//        }
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
