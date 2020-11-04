@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import UserNotifications
 //import Intents
 
 class TutorialViewController: UIViewController {

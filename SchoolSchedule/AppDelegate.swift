@@ -51,14 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let day = Calendar.current.component(.day, from: Date())
         let weekday = Calendar.current.component(.weekday, from: Date())
         UNUserNotificationCenter.current().getPendingNotificationRequests { (notifications) in
-//            if !notifications.isEmpty || (UserDefaults.standard.integer(forKey: "lastFetch") == day){
-//                completionHandler(.noData)
-//            } else {
-//                completionHandler(self.generateNewNotifications())
-//            }
-//            completionHandler(self.generateNewNotifications())
-            let i = (UserDefaults.standard.integer(forKey: "lastFetch"))
-            if ((UserDefaults.standard.integer(forKey: "lastFetch") == day) && !((weekday == 1) || (weekday == 7))) {
+            let lastFetch = (UserDefaults.standard.integer(forKey: "lastFetch"))
+            if ((lastFetch == day) && !((weekday == 1) || (weekday == 7))) {
                 UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                 UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { (requests) in
                     for request in requests {
@@ -68,7 +62,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                     completionHandler(self.generateNewNotifications())
                 })
                 print("a")
-//                completionHandler(self.generateNewNotifications())
             } else {
                 print("No Data")
                 completionHandler(.noData)
@@ -150,8 +143,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 }
                 createNotification(managed: result, endManaged: endResult)
             }
-            return .newData
-            //            display(managed: results.last, endManaged: endResults[safe: results.count])
+            return .newData // Should return if and only if there is actually a new relevant notification so that trainer is taught only to reload every Period - 5 minutes
         } catch {
             print(error)
             return .failed
@@ -183,7 +175,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             secondClassName = "done"
         }
         content.title = firstClassName + " -> " + secondClassName
-        //        content.userInfo = ["classData" : classData, "classResources" : classResources, "finalResources" : finalResources ?? 0, "finalData" : finalData ?? 0]
         content.body = "\(Date().timeIntervalSinceReferenceDate)"
         content.subtitle = "\(Date().timeIntervalSinceReferenceDate)"
         content.categoryIdentifier = "com.addisonHanrattie.SSClassNoti"
@@ -196,7 +187,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         } else {
             minute -= 15
         }
-//        let triggerDate = Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: Date())
         var triggerDate = Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: Date(), matchingPolicy: Calendar.MatchingPolicy.nextTime, repeatedTimePolicy: Calendar.RepeatedTimePolicy.first, direction: Calendar.SearchDirection.forward)
         if triggerDate! < Date() {
             triggerDate! += 86400.0

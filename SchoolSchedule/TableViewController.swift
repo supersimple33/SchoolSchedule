@@ -106,7 +106,6 @@ class TableViewController: UITableViewController, UIViewControllerPreviewingDele
                     return false
                 }
             })
-//            sectionHours[section] = values
             sectionHours[section] = values
             print(sectionHours)
             return results.count
