@@ -12,7 +12,7 @@
 		<key>SchoolScheduleWidget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -53,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>FE995A10218119F200FB3F41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEA4CE74254F874300CD689B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

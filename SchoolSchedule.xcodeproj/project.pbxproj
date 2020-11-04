@@ -97,6 +97,8 @@
 		FE3062D9201CF7B800C007B9 /* SchoolSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchoolSchedule.entitlements; sourceTree = "<group>"; };
 		FE33065420250E5400B7908B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FE9552F52143291900728520 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		FEA4CE76254F874300CD689B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FEA4CE78254F874300CD689B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		FEB3181C204CC87C0059B69A /* BigCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCellView.swift; sourceTree = "<group>"; };
 		FEC0C7062146E31400D0C27C /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		FED32FFA2072E11A00BDE0C8 /* SchoolSchedule.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SchoolSchedule.sqlite; sourceTree = "<group>"; };
@@ -211,6 +213,8 @@
 			children = (
 				FE3062C7201ABB9800C007B9 /* NotificationCenter.framework */,
 				FE9552F52143291900728520 /* IntentsUI.framework */,
+				FEA4CE76254F874300CD689B /* WidgetKit.framework */,
+				FEA4CE78254F874300CD689B /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,7 +311,7 @@
 		FE306285201AB9B400C007B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Addison Hanrattie";
 				TargetAttributes = {
@@ -631,6 +635,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Z9MH7A898M;
 				INFOPLIST_FILE = SchoolSchedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,6 +656,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9MH7A898M;
 				INFOPLIST_FILE = SchoolSchedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -751,6 +757,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9MH7A898M;
 				INFOPLIST_FILE = SchoolScheduleWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -771,6 +778,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9MH7A898M;
 				INFOPLIST_FILE = SchoolScheduleWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

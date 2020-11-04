@@ -91,7 +91,7 @@ let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
         } catch {
             print(error)
         }
-        print(resources)
+        print(resources as Any)
         let titleName = (resources.value(forKey: "classname") ?? "") as! String
         TitleField.text = titleName
         TitleField.placeholder = "Choose A Class Name"
