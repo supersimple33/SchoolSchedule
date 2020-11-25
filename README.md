@@ -1,5 +1,6 @@
 # SchoolSchedule
 An app the provides a widget and notification subscriber to stay up to date with a school schedule. *The widget will not work on ios 14 as it was created for the old widget system however, it would not be hard to update the code.*
+![A Demo of the School Schedule Widget](widget.jpg)
 ## Setup
 Upon opening the app the user may tap left and right to start configuring their schedule. The first page will allow the user to automatically configure an 8-day schedule. The following pages may be used to set the name, description and add an icon to each class. Next the order and time of classes may be set within the table view. Once fully setup notifications will be scheduled and the widget will be setup.
 ## Notifications
